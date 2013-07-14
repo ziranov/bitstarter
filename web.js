@@ -6,7 +6,7 @@ var fs = require('fs');
 
 app.get('/', function(request, response) {
 
-  response.send('helloz');
+  response.send( fs.readFile('index.html').toString());
 });
 
 var port = process.env.PORT || 5000;
